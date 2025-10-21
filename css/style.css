@@ -334,20 +334,6 @@
     }
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    .card-modern {
-        background: #1f2937;
-        border-color: #374151;
-    }
-    
-    .input-modern {
-        background: #374151;
-        border-color: #4b5563;
-        color: white;
-    }
-}
-
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
