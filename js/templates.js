@@ -162,43 +162,6 @@ Apakah saat ini Bapak/Ibu kendalanya sudah tertangani?{asp}`,
       return false;
     }
   }
-
-  /**
-   * Export templates as JSON
-   */
-  exportTemplates() {
-    const data = {
-      builtIn: this.templates,
-      custom: this.customTemplates,
-      exportDate: new Date().toISOString(),
-      version: "1.0",
-    };
-
-    Utils.downloadFile(
-      JSON.stringify(data, null, 2),
-      `templates-export-${new Date().toISOString().split("T")[0]}.json`,
-      "application/json"
-    );
-  }
-
-  /**
-   * Import templates from JSON
-   */
-  importTemplates(jsonData) {
-    try {
-      const data = JSON.parse(jsonData);
-
-      if (data.custom) {
-        this.customTemplates = { ...this.customTemplates, ...data.custom };
-        this.saveCustomTemplates();
-      }
-
-      return true;
-    } catch (error) {
-      console.error("Error importing templates:", error);
-      return false;
-    }
-  }
 }
 
 // Create global instance
