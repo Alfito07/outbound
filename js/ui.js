@@ -84,7 +84,7 @@ class UIManager {
         icon: "fa-user",
         iconColor: "text-blue-500",
         label: "Nama Pelanggan",
-        placeholder: "FAUZI FAZRU RAHMAN\nRAIHAN\nJANUARI KRAMA PUTRA",
+        placeholder: "LIONEL MESSI\nCRISTIANO RONALDO\nKYLIAN MBAPPE",
         gradient: "from-blue-500 to-cyan-600",
       },
       {
@@ -92,7 +92,7 @@ class UIManager {
         icon: "fa-ticket-alt",
         iconColor: "text-green-500",
         label: "Nomor Tiket",
-        placeholder: "RYZNZ5XN\nRYZNJLNSK\nRYZNZ5DV",
+        placeholder: "RYZN1001\nRYZN1002\nRYZN1003",
         gradient: "from-green-500 to-emerald-600",
       },
       {
