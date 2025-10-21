@@ -3,12 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      http-equiv="Cache-Control"
-      content="no-cache, no-store, must-revalidate"
-    />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
     <title>Generator Pesan Konfirmasi - NOC Outbound</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -17,29 +11,25 @@
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body
-    class="bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 min-h-screen flex flex-col items-center p-4"
-  >
+  <body class="bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 min-h-screen flex flex-col items-center p-4">
     <div class="w-full max-w-7xl">
       <!-- Enhanced Hero Section -->
-      <header
-        class="text-center mb-8 bg-gradient-to-r from-slate-800 to-slate-900 text-white py-10 rounded-xl border-b-4 border-blue-500"
-      >
-        <div class="max-w-3xl mx-auto px-4">
-          <!-- Compact Icon -->
-          <div
-            class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg"
-          >
+<header class="text-center mb-8 bg-gradient-to-r from-slate-800 to-slate-900 text-white py-10 rounded-xl border-b-4 border-blue-500">
+    <div class="max-w-3xl mx-auto px-4">
+        <!-- Compact Icon -->
+        <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
             <i class="fas fa-message text-white"></i>
-          </div>
-
-          <!-- Clean Typography -->
-          <h1 class="text-3xl md:text-4xl font-semibold mb-2 text-white">
-            Message Generator
-          </h1>
-          <p class="text-blue-200 font-light">NOC Outbound JAYA JAYA JAYA</p>
         </div>
-      </header>
+        
+        <!-- Clean Typography -->
+        <h1 class="text-3xl md:text-4xl font-semibold mb-2 text-white">
+            Message Generator
+        </h1>
+        <p class="text-blue-200 font-light">
+            NOC Outbound JAYA JAYA JAYA
+        </p>
+    </div>
+</header>
 
       <!-- Main Content Container -->
       <div class="glass-effect rounded-3xl p-8 mb-8">
@@ -49,10 +39,7 @@
         </div>
 
         <!-- Input Area -->
-        <section
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
-          id="inputSection"
-        >
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8" id="inputSection">
           <!-- Content will be injected by JavaScript -->
         </section>
 
@@ -70,10 +57,7 @@
         <section class="mb-6" id="templateSection"></section>
 
         <!-- Action Buttons -->
-        <div
-          class="flex gap-4 mb-6 flex-wrap justify-center"
-          id="actionButtons"
-        >
+        <div class="flex gap-4 mb-6 flex-wrap justify-center" id="actionButtons">
           <!-- Buttons will be injected by JavaScript -->
         </div>
 
@@ -85,17 +69,13 @@
     <!-- Footer -->
     <footer class="text-center py-8 text-gray-600 text-sm w-full max-w-7xl">
       <div class="glass-effect rounded-2xl p-6">
-        <p class="font-semibold text-gray-700">
-          &copy; 2025 NOC Outbound | All rights reserved
-        </p>
+        <p class="font-semibold text-gray-700">&copy; 2025 NOC Outbound  | All rights reserved</p>
       </div>
     </footer>
 
     <!-- Enhanced Floating Menu -->
-    <div
-      id="floatingMenu"
-      class="fixed bottom-8 right-8 flex flex-col gap-4 z-50"
-    >
+    <div id="floatingMenu" class="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
+
       <!-- Keyboard Shortcuts -->
       <button
         onclick="showKeyboardShortcuts()"
@@ -128,9 +108,7 @@
           class="flex justify-between items-center p-8 border-b border-white/20"
         >
           <h3 class="text-2xl font-bold text-gray-800 flex items-center gap-3">
-            <div
-              class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center"
-            >
+            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center">
               <i class="fas fa-keyboard text-white text-xl"></i>
             </div>
             <span>Keyboard Shortcuts</span>
@@ -148,89 +126,72 @@
             class="flex justify-between items-center py-3 border-b border-gray-100"
           >
             <div class="flex items-center gap-3">
-              <div
-                class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center"
-              >
+              <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
                 <i class="fas fa-play-circle text-blue-600"></i>
               </div>
               <span class="text-gray-700 font-medium">Generate Pesan</span>
             </div>
-            <kbd
-              class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-mono shadow-lg"
+            <kbd class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-mono shadow-lg"
               >Ctrl + Enter</kbd
             >
           </div>
-
+          
           <div
             class="flex justify-between items-center py-3 border-b border-gray-100"
           >
             <div class="flex items-center gap-3">
-              <div
-                class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center"
-              >
+              <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
                 <i class="fas fa-search text-green-600"></i>
               </div>
               <span class="text-gray-700 font-medium">Preview Detection</span>
             </div>
-            <kbd
-              class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-mono shadow-lg"
+            <kbd class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-mono shadow-lg"
               >Ctrl + P</kbd
             >
           </div>
-
+          
           <div
             class="flex justify-between items-center py-3 border-b border-gray-100"
           >
             <div class="flex items-center gap-3">
-              <div
-                class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center"
-              >
+              <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
                 <i class="fas fa-copy text-purple-600"></i>
               </div>
               <span class="text-gray-700 font-medium">Copy Semua Pesan</span>
             </div>
-            <kbd
-              class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-mono shadow-lg"
+            <kbd class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-mono shadow-lg"
               >Ctrl + C</kbd
             >
           </div>
-
+          
           <div
             class="flex justify-between items-center py-3 border-b border-gray-100"
           >
             <div class="flex items-center gap-3">
-              <div
-                class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center"
-              >
+              <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
                 <i class="fas fa-trash text-red-600"></i>
               </div>
               <span class="text-gray-700 font-medium">Hapus Semua Input</span>
             </div>
-            <kbd
-              class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-mono shadow-lg"
+            <kbd class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-mono shadow-lg"
               >Ctrl + Delete</kbd
             >
           </div>
-
+          
           <div class="flex justify-between items-center py-3">
             <div class="flex items-center gap-3">
-              <div
-                class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center"
-              >
+              <div class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center">
                 <i class="fas fa-question-circle text-yellow-600"></i>
               </div>
               <span class="text-gray-700 font-medium">Bantuan</span>
             </div>
-            <kbd
-              class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-mono shadow-lg"
+            <kbd class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-mono shadow-lg"
               >F1</kbd
             >
           </div>
         </div>
-
-        <div
-          class="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-b-3xl text-center border-t border-white/20"
-        >
+        
+        <div class="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-b-3xl text-center border-t border-white/20">
           <p class="text-sm text-gray-600 font-medium">
             🚀 Gunakan shortcut untuk bekerja lebih efisien!
           </p>
@@ -252,9 +213,7 @@
           class="flex justify-between items-center p-8 border-b border-white/20 bg-gradient-to-r from-blue-50/80 to-purple-50/80"
         >
           <h3 class="text-2xl font-bold text-gray-800 flex items-center gap-3">
-            <div
-              class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center"
-            >
+            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
               <i class="fas fa-info-circle text-white text-xl"></i>
             </div>
             <span>Panduan Penggunaan Aplikasi</span>
@@ -284,21 +243,15 @@
 
           <!-- Langkah Penggunaan -->
           <div class="card-modern">
-            <h5
-              class="font-bold text-gray-800 text-xl mb-4 flex items-center gap-3"
-            >
-              <div
-                class="w-10 h-10 bg-blue-500 rounded-2xl flex items-center justify-center"
-              >
+            <h5 class="font-bold text-gray-800 text-xl mb-4 flex items-center gap-3">
+              <div class="w-10 h-10 bg-blue-500 rounded-2xl flex items-center justify-center">
                 <i class="fas fa-play-circle text-white"></i>
               </div>
               <span>📋 Langkah Penggunaan</span>
             </h5>
             <div class="space-y-4">
               <div class="flex items-start gap-4 p-4 bg-blue-50 rounded-2xl">
-                <div
-                  class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1 flex-shrink-0"
-                >
+                <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1 flex-shrink-0">
                   1
                 </div>
                 <div>
@@ -309,17 +262,13 @@
                   </p>
                 </div>
               </div>
-
+              
               <div class="flex items-start gap-4 p-4 bg-green-50 rounded-2xl">
-                <div
-                  class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1 flex-shrink-0"
-                >
+                <div class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1 flex-shrink-0">
                   2
                 </div>
                 <div>
-                  <strong class="text-green-700 text-lg"
-                    >Klik "Generate Pesan"</strong
-                  >
+                  <strong class="text-green-700 text-lg">Klik "Generate Pesan"</strong>
                   <p class="text-green-600 mt-2">
                     Sistem otomatis memilih template berdasarkan kategori dan
                     keperluan. Hasil pesan sudah diformat sesuai standar
@@ -327,17 +276,13 @@
                   </p>
                 </div>
               </div>
-
+              
               <div class="flex items-start gap-4 p-4 bg-purple-50 rounded-2xl">
-                <div
-                  class="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1 flex-shrink-0"
-                >
+                <div class="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1 flex-shrink-0">
                   3
                 </div>
                 <div>
-                  <strong class="text-purple-700 text-lg"
-                    >Salin & Kirim Pesan</strong
-                  >
+                  <strong class="text-purple-700 text-lg">Salin & Kirim Pesan</strong>
                   <p class="text-purple-600 mt-2">
                     Klik tombol "Copy" untuk menyalin hasil, lalu tempelkan ke
                     WhatsApp Web .
@@ -349,107 +294,59 @@
 
           <!-- Aturan Template -->
           <div class="card-modern">
-            <h5
-              class="font-bold text-gray-800 text-xl mb-4 flex items-center gap-3"
-            >
-              <div
-                class="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center"
-              >
+            <h5 class="font-bold text-gray-800 text-xl mb-4 flex items-center gap-3">
+              <div class="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
                 <i class="fas fa-robot text-white"></i>
               </div>
               <span>🎯 Template Otomatis</span>
             </h5>
             <div class="space-y-3">
-              <div
-                class="flex justify-between items-center p-3 bg-gray-50 rounded-xl"
-              >
-                <span class="text-gray-700 font-medium"
-                  >INTERNET DOWN / SLOW / LAIN-LAIN</span
-                >
-                <span
-                  class="template-badge bg-gradient-to-r from-blue-500 to-cyan-600"
-                  >Template Standar</span
-                >
+              <div class="flex justify-between items-center p-3 bg-gray-50 rounded-xl">
+                <span class="text-gray-700 font-medium">INTERNET DOWN / SLOW / LAIN-LAIN</span>
+                <span class="template-badge bg-gradient-to-r from-blue-500 to-cyan-600">Template Standar</span>
               </div>
-              <div
-                class="flex justify-between items-center p-3 bg-gray-50 rounded-xl"
-              >
-                <span class="text-gray-700 font-medium"
-                  >"terreset", "tereset", "default"</span
-                >
-                <span
-                  class="template-badge bg-gradient-to-r from-orange-500 to-red-500"
-                  >WiFi Default</span
-                >
+              <div class="flex justify-between items-center p-3 bg-gray-50 rounded-xl">
+                <span class="text-gray-700 font-medium">"terreset", "tereset", "default"</span>
+                <span class="template-badge bg-gradient-to-r from-orange-500 to-red-500">WiFi Default</span>
               </div>
-              <div
-                class="flex justify-between items-center p-3 bg-gray-50 rounded-xl"
-              >
-                <span class="text-gray-700 font-medium"
-                  >"SSID dan Password"</span
-                >
-                <span
-                  class="template-badge bg-gradient-to-r from-purple-500 to-pink-600"
-                  >Ganti SSID+Password</span
-                >
+              <div class="flex justify-between items-center p-3 bg-gray-50 rounded-xl">
+                <span class="text-gray-700 font-medium">"SSID dan Password"</span>
+                <span class="template-badge bg-gradient-to-r from-purple-500 to-pink-600">Ganti SSID+Password</span>
               </div>
-              <div
-                class="flex justify-between items-center p-3 bg-gray-50 rounded-xl"
-              >
+              <div class="flex justify-between items-center p-3 bg-gray-50 rounded-xl">
                 <span class="text-gray-700 font-medium">"Password" saja</span>
-                <span
-                  class="template-badge bg-gradient-to-r from-indigo-500 to-purple-600"
-                  >Ganti Password</span
-                >
+                <span class="template-badge bg-gradient-to-r from-indigo-500 to-purple-600">Ganti Password</span>
               </div>
-              <div
-                class="flex justify-between items-center p-3 bg-gray-50 rounded-xl"
-              >
+              <div class="flex justify-between items-center p-3 bg-gray-50 rounded-xl">
                 <span class="text-gray-700 font-medium">"SSID" saja</span>
-                <span
-                  class="template-badge bg-gradient-to-r from-teal-500 to-cyan-600"
-                  >Ganti SSID</span
-                >
+                <span class="template-badge bg-gradient-to-r from-teal-500 to-cyan-600">Ganti SSID</span>
               </div>
-              <div
-                class="flex justify-between items-center p-3 bg-gray-50 rounded-xl"
-              >
-                <span class="text-gray-700 font-medium"
-                  >GANGGUAN-ICONPLAY/CUBMU/VIU/VIDIO</span
-                >
-                <span
-                  class="template-badge bg-gradient-to-r from-red-500 to-pink-600"
-                  >GANGGUAN LAYANAN</span
-                >
+              <div class="flex justify-between items-center p-3 bg-gray-50 rounded-xl">
+                <span class="text-gray-700 font-medium">GANGGUAN-ICONPLAY/CUBMU/VIU/VIDIO</span>
+                <span class="template-badge bg-gradient-to-r from-red-500 to-pink-600">GANGGUAN LAYANAN</span>
               </div>
             </div>
           </div>
 
           <!-- Pengecekan Ulang -->
           <div class="card-modern border-2 border-yellow-200 bg-yellow-50/50">
-            <h5
-              class="font-bold text-yellow-800 text-xl mb-4 flex items-center gap-3"
-            >
-              <div
-                class="w-10 h-10 bg-yellow-500 rounded-2xl flex items-center justify-center"
-              >
+            <h5 class="font-bold text-yellow-800 text-xl mb-4 flex items-center gap-3">
+              <div class="w-10 h-10 bg-yellow-500 rounded-2xl flex items-center justify-center">
                 <i class="fas fa-shield-alt text-white"></i>
               </div>
               <span>🔍 Verifikasi Ulang</span>
             </h5>
             <div class="space-y-3 text-yellow-700">
               <p class="font-semibold">
-                Sebelum mengirim ke pelanggan, selalu lakukan pengecekan ulang
-                di ICRM untuk kasus:
+                Sebelum mengirim ke pelanggan, selalu lakukan pengecekan
+                ulang di ICRM untuk kasus:
               </p>
               <ul class="list-disc list-inside space-y-2 ml-4">
                 <li>Pergantian SSID atau Password</li>
                 <li>Reset perangkat (WiFi Default)</li>
                 <li>Gangguan layanan (ICONPLAY, VIU, CUBMU, VIDIO)</li>
               </ul>
-              <p
-                class="text-sm italic mt-3 p-3 bg-yellow-100 rounded-xl border border-yellow-200"
-              >
+              <p class="text-sm italic mt-3 p-3 bg-yellow-100 rounded-xl border border-yellow-200">
                 Beberapa data mungkin masih menggunakan template default,
                 sehingga perlu pengecekan ulang.
               </p>
@@ -464,14 +361,10 @@
       id="loadingSpinner"
       class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50"
     >
-      <div
-        class="glass-effect p-8 rounded-3xl flex items-center gap-4 border border-white/20"
-      >
+      <div class="glass-effect p-8 rounded-3xl flex items-center gap-4 border border-white/20">
         <div class="relative">
           <div class="w-12 h-12 border-4 border-blue-200 rounded-full"></div>
-          <div
-            class="w-12 h-12 border-4 border-blue-600 rounded-full absolute top-0 left-0 animate-spin border-t-transparent"
-          ></div>
+          <div class="w-12 h-12 border-4 border-blue-600 rounded-full absolute top-0 left-0 animate-spin border-t-transparent"></div>
         </div>
         <div>
           <span class="text-gray-700 font-semibold">Memproses...</span>

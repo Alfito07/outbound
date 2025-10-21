@@ -34,18 +34,13 @@ class MessageGeneratorApp {
 
     const missingAPIs = requiredAPIs.filter((api) => !(api in window));
 
-    const criticalDeps = {
-      "ES6 Support": () => {
-        try {
-          new Function("class Test {}; const fn = () => {};");
-          return true;
-        } catch {
-          return false;
-        }
-      },
-      LocalStorage: () => typeof localStorage !== "undefined",
-      "JSON Support": () => typeof JSON !== "undefined",
-    };
+    if (missingAPIs.length > 0) {
+      console.warn("Missing APIs:", missingAPIs);
+      Utils.showToast(
+        "Beberapa fitur mungkin tidak tersedia di browser ini",
+        "warning"
+      );
+    }
 
     // Check storage availability
     if (!storageManager.isAvailable) {
@@ -54,30 +49,8 @@ class MessageGeneratorApp {
         "error"
       );
     }
-    const missingDeps = Object.entries(criticalDeps)
-      .filter(([name, check]) => !check())
-      .map(([name]) => name);
-
-    if (missingDeps.length > 0) {
-      console.error("Missing critical dependencies:", missingDeps);
-      this.showCriticalError(
-        `Browser tidak mendukung: ${missingDeps.join(", ")}`
-      );
-      return false;
-    }
-
-    return true;
   }
 
-  showCriticalError(message) {
-    document.body.innerHTML = `
-    <div class="p-8 bg-red-50 border border-red-300 rounded-lg max-w-md mx-auto mt-20">
-      <h2 class="text-red-800 text-xl font-bold mb-4">⚠️ Browser Tidak Didukung</h2>
-      <p class="text-red-700 mb-4">${message}</p>
-      <p class="text-sm text-red-600">Silakan gunakan browser modern seperti Chrome, Firefox, atau Edge.</p>
-    </div>
-  `;
-  }
   /**
    * Initialize all components
    */
@@ -134,7 +107,7 @@ class MessageGeneratorApp {
       // Show help on F1
       if (e.key === "F1") {
         e.preventDefault();
-        this.showModal("shortcutsModal");
+        this.showModal('shortcutsModal');
       }
     });
   }
@@ -144,62 +117,62 @@ class MessageGeneratorApp {
    */
   showModal(modalId) {
     const modal = document.getElementById(modalId);
-    const modalContent = document.getElementById(modalId + "Content");
-
+    const modalContent = document.getElementById(modalId + 'Content');
+    
     if (modal && modalContent) {
-      modal.classList.remove("hidden");
-
-      // Trigger animation
-      setTimeout(() => {
-        modalContent.classList.remove("scale-95", "opacity-0");
-        modalContent.classList.add("scale-100", "opacity-100");
-      }, 10);
-
-      // Add escape key listener
-      this.addEscapeListener(modalId);
+        modal.classList.remove('hidden');
+        
+        // Trigger animation
+        setTimeout(() => {
+            modalContent.classList.remove('scale-95', 'opacity-0');
+            modalContent.classList.add('scale-100', 'opacity-100');
+        }, 10);
+        
+        // Add escape key listener
+        this.addEscapeListener(modalId);
     }
   }
 
   closeModal(modalId) {
     const modal = document.getElementById(modalId);
-    const modalContent = document.getElementById(modalId + "Content");
-
+    const modalContent = document.getElementById(modalId + 'Content');
+    
     if (modal && modalContent) {
-      // Trigger exit animation
-      modalContent.classList.remove("scale-100", "opacity-100");
-      modalContent.classList.add("scale-95", "opacity-0");
-
-      // Wait for animation to complete then hide
-      setTimeout(() => {
-        modal.classList.add("hidden");
-      }, 200);
+        // Trigger exit animation
+        modalContent.classList.remove('scale-100', 'opacity-100');
+        modalContent.classList.add('scale-95', 'opacity-0');
+        
+        // Wait for animation to complete then hide
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 200);
     }
   }
 
   addEscapeListener(modalId) {
     const escapeHandler = (e) => {
-      if (e.key === "Escape") {
-        this.closeModal(modalId);
-        document.removeEventListener("keydown", escapeHandler);
-      }
+        if (e.key === 'Escape') {
+            this.closeModal(modalId);
+            document.removeEventListener('keydown', escapeHandler);
+        }
     };
-
-    document.addEventListener("keydown", escapeHandler);
-
+    
+    document.addEventListener('keydown', escapeHandler);
+    
     // Remove listener when modal closes
     setTimeout(() => {
-      const checkModal = document.getElementById(modalId);
-      if (checkModal.classList.contains("hidden")) {
-        document.removeEventListener("keydown", escapeHandler);
-      }
+        const checkModal = document.getElementById(modalId);
+        if (checkModal.classList.contains('hidden')) {
+            document.removeEventListener('keydown', escapeHandler);
+        }
     }, 300);
   }
 
   setupModalBackdropClose() {
-    document.addEventListener("click", (e) => {
-      if (e.target.id === "shortcutsModal" || e.target.id === "aboutModal") {
-        this.closeModal(e.target.id);
-      }
+    document.addEventListener('click', (e) => {
+        if (e.target.id === 'shortcutsModal' || e.target.id === 'aboutModal') {
+            this.closeModal(e.target.id);
+        }
     });
   }
 }
@@ -207,13 +180,13 @@ class MessageGeneratorApp {
 // ✅ Global functions for HTML onclick handlers
 window.showKeyboardShortcuts = () => {
   if (window.app) {
-    window.app.showModal("shortcutsModal");
+    window.app.showModal('shortcutsModal');
   }
 };
 
 window.showAbout = () => {
   if (window.app) {
-    window.app.showModal("aboutModal");
+    window.app.showModal('aboutModal');
   }
 };
 
