@@ -5,8 +5,7 @@
 class TemplateManager {
   constructor() {
     this.templates = {
-      standard: `{salam} pengguna ICONNET atas nama Bpk/Ibu {nama}, sebelumnya kami memohon maaf atas kendala yang Bpk/Ibu alami. Kami dari ICONNET ingin follow-up terkait laporan kendala {kategori}
-dengan No. Tiket pelaporan {tiket}.
+      standard: `{salam} pengguna ICONNET atas nama Bpk/Ibu {nama}, sebelumnya kami memohon maaf atas kendala yang Bpk/Ibu alami. Kami dari ICONNET ingin follow-up terkait laporan kendala {kategori} dengan No. Tiket pelaporan {tiket}.
 
 Apakah saat ini Bapak/Ibu kendalanya sudah tertangani?{asp}`,
 
