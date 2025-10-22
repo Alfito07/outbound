@@ -29,26 +29,21 @@ class MessageGeneratorApp {
    * Check environment and dependencies
    */
   checkEnvironment() {
-    // Check for required APIs
-    const requiredAPIs = ["Promise", "Map", "Set", "localStorage", "clipboard"];
-
-    const missingAPIs = requiredAPIs.filter((api) => !(api in window));
-
-    if (missingAPIs.length > 0) {
-      console.warn("Missing APIs:", missingAPIs);
+    let isFullyCompatible = true;
+    try {
+      const test = "storage_test";
+      localStorage.setItem(test, test);
+      localStorage.removeItem(test);
+    } catch (e) {
+      console.warn("LocalStorage not available - auto-save disabled");
       Utils.showToast(
-        "Beberapa fitur mungkin tidak tersedia di browser ini",
-        "warning"
+        "Mode sementara: Progress tidak akan tersimpan setelah browser ditutup.",
+        "warning",
+        5000
       );
+      isFullyCompatible = false;
     }
-
-    // Check storage availability
-    if (!storageManager.isAvailable) {
-      Utils.showToast(
-        "Penyimpanan lokal tidak tersedia. Beberapa fitur akan dinonaktifkan.",
-        "error"
-      );
-    }
+    return isFullyCompatible;
   }
 
   /**
@@ -107,7 +102,7 @@ class MessageGeneratorApp {
       // Show help on F1
       if (e.key === "F1") {
         e.preventDefault();
-        this.showModal('shortcutsModal');
+        this.showModal("shortcutsModal");
       }
     });
   }
@@ -117,62 +112,62 @@ class MessageGeneratorApp {
    */
   showModal(modalId) {
     const modal = document.getElementById(modalId);
-    const modalContent = document.getElementById(modalId + 'Content');
-    
+    const modalContent = document.getElementById(modalId + "Content");
+
     if (modal && modalContent) {
-        modal.classList.remove('hidden');
-        
-        // Trigger animation
-        setTimeout(() => {
-            modalContent.classList.remove('scale-95', 'opacity-0');
-            modalContent.classList.add('scale-100', 'opacity-100');
-        }, 10);
-        
-        // Add escape key listener
-        this.addEscapeListener(modalId);
+      modal.classList.remove("hidden");
+
+      // Trigger animation
+      setTimeout(() => {
+        modalContent.classList.remove("scale-95", "opacity-0");
+        modalContent.classList.add("scale-100", "opacity-100");
+      }, 10);
+
+      // Add escape key listener
+      this.addEscapeListener(modalId);
     }
   }
 
   closeModal(modalId) {
     const modal = document.getElementById(modalId);
-    const modalContent = document.getElementById(modalId + 'Content');
-    
+    const modalContent = document.getElementById(modalId + "Content");
+
     if (modal && modalContent) {
-        // Trigger exit animation
-        modalContent.classList.remove('scale-100', 'opacity-100');
-        modalContent.classList.add('scale-95', 'opacity-0');
-        
-        // Wait for animation to complete then hide
-        setTimeout(() => {
-            modal.classList.add('hidden');
-        }, 200);
+      // Trigger exit animation
+      modalContent.classList.remove("scale-100", "opacity-100");
+      modalContent.classList.add("scale-95", "opacity-0");
+
+      // Wait for animation to complete then hide
+      setTimeout(() => {
+        modal.classList.add("hidden");
+      }, 200);
     }
   }
 
   addEscapeListener(modalId) {
     const escapeHandler = (e) => {
-        if (e.key === 'Escape') {
-            this.closeModal(modalId);
-            document.removeEventListener('keydown', escapeHandler);
-        }
+      if (e.key === "Escape") {
+        this.closeModal(modalId);
+        document.removeEventListener("keydown", escapeHandler);
+      }
     };
-    
-    document.addEventListener('keydown', escapeHandler);
-    
+
+    document.addEventListener("keydown", escapeHandler);
+
     // Remove listener when modal closes
     setTimeout(() => {
-        const checkModal = document.getElementById(modalId);
-        if (checkModal.classList.contains('hidden')) {
-            document.removeEventListener('keydown', escapeHandler);
-        }
+      const checkModal = document.getElementById(modalId);
+      if (checkModal.classList.contains("hidden")) {
+        document.removeEventListener("keydown", escapeHandler);
+      }
     }, 300);
   }
 
   setupModalBackdropClose() {
-    document.addEventListener('click', (e) => {
-        if (e.target.id === 'shortcutsModal' || e.target.id === 'aboutModal') {
-            this.closeModal(e.target.id);
-        }
+    document.addEventListener("click", (e) => {
+      if (e.target.id === "shortcutsModal" || e.target.id === "aboutModal") {
+        this.closeModal(e.target.id);
+      }
     });
   }
 }
@@ -180,13 +175,13 @@ class MessageGeneratorApp {
 // ✅ Global functions for HTML onclick handlers
 window.showKeyboardShortcuts = () => {
   if (window.app) {
-    window.app.showModal('shortcutsModal');
+    window.app.showModal("shortcutsModal");
   }
 };
 
 window.showAbout = () => {
   if (window.app) {
-    window.app.showModal('aboutModal');
+    window.app.showModal("aboutModal");
   }
 };
 
