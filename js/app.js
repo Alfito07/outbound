@@ -61,9 +61,6 @@ class MessageGeneratorApp {
       this.saveBeforeUnload();
     });
 
-    // Initialize keyboard shortcuts help
-    this.setupKeyboardShortcuts();
-
     // Initialize modal backdrop close
     this.setupModalBackdropClose();
   }
@@ -92,19 +89,6 @@ class MessageGeneratorApp {
 
     // Save progress
     uiManager.saveTodayProgress();
-  }
-
-  /**
-   * Set up keyboard shortcuts help
-   */
-  setupKeyboardShortcuts() {
-    document.addEventListener("keydown", (e) => {
-      // Show help on F1
-      if (e.key === "F1") {
-        e.preventDefault();
-        this.showModal("shortcutsModal");
-      }
-    });
   }
 
   /**
@@ -165,19 +149,14 @@ class MessageGeneratorApp {
 
   setupModalBackdropClose() {
     document.addEventListener("click", (e) => {
-      if (e.target.id === "shortcutsModal" || e.target.id === "aboutModal") {
+      if (e.target.id === "aboutModal") {
         this.closeModal(e.target.id);
       }
     });
   }
 }
 
-// ✅ Global functions for HTML onclick handlers
-window.showKeyboardShortcuts = () => {
-  if (window.app) {
-    window.app.showModal("shortcutsModal");
-  }
-};
+
 
 window.showAbout = () => {
   if (window.app) {

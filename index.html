@@ -75,16 +75,6 @@
 
     <!-- Enhanced Floating Menu -->
     <div id="floatingMenu" class="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
-
-      <!-- Keyboard Shortcuts -->
-      <button
-        onclick="showKeyboardShortcuts()"
-        class="floating-btn bg-gradient-to-r from-purple-500 to-pink-600 delay-75"
-        title="Keyboard Shortcuts (F1)"
-      >
-        <i class="fas fa-keyboard"></i>
-      </button>
-
       <!-- About -->
       <button
         onclick="showAbout()"
@@ -93,110 +83,6 @@
       >
         <i class="fas fa-info-circle"></i>
       </button>
-    </div>
-
-    <!-- Keyboard Shortcuts Modal -->
-    <div
-      id="shortcutsModal"
-      class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4"
-    >
-      <div
-        class="glass-effect rounded-3xl shadow-2xl max-w-md w-full transform transition-all duration-300 scale-95 opacity-0 border border-white/20"
-        id="shortcutsModalContent"
-      >
-        <div
-          class="flex justify-between items-center p-8 border-b border-white/20"
-        >
-          <h3 class="text-2xl font-bold text-gray-800 flex items-center gap-3">
-            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center">
-              <i class="fas fa-keyboard text-white text-xl"></i>
-            </div>
-            <span>Keyboard Shortcuts</span>
-          </h3>
-          <button
-            onclick="closeModal('shortcutsModal')"
-            class="text-gray-400 hover:text-gray-600 transition-colors w-10 h-10 flex items-center justify-center hover:bg-gray-100 rounded-xl"
-          >
-            <i class="fas fa-times text-xl"></i>
-          </button>
-        </div>
-
-        <div class="p-8 space-y-6">
-          <div
-            class="flex justify-between items-center py-3 border-b border-gray-100"
-          >
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-                <i class="fas fa-play-circle text-blue-600"></i>
-              </div>
-              <span class="text-gray-700 font-medium">Generate Pesan</span>
-            </div>
-            <kbd class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-mono shadow-lg"
-              >Ctrl + Enter</kbd
-            >
-          </div>
-          
-          <div
-            class="flex justify-between items-center py-3 border-b border-gray-100"
-          >
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
-                <i class="fas fa-search text-green-600"></i>
-              </div>
-              <span class="text-gray-700 font-medium">Preview Detection</span>
-            </div>
-            <kbd class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-mono shadow-lg"
-              >Ctrl + P</kbd
-            >
-          </div>
-          
-          <div
-            class="flex justify-between items-center py-3 border-b border-gray-100"
-          >
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
-                <i class="fas fa-copy text-purple-600"></i>
-              </div>
-              <span class="text-gray-700 font-medium">Copy Semua Pesan</span>
-            </div>
-            <kbd class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-mono shadow-lg"
-              >Ctrl + C</kbd
-            >
-          </div>
-          
-          <div
-            class="flex justify-between items-center py-3 border-b border-gray-100"
-          >
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
-                <i class="fas fa-trash text-red-600"></i>
-              </div>
-              <span class="text-gray-700 font-medium">Hapus Semua Input</span>
-            </div>
-            <kbd class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-mono shadow-lg"
-              >Ctrl + Delete</kbd
-            >
-          </div>
-          
-          <div class="flex justify-between items-center py-3">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center">
-                <i class="fas fa-question-circle text-yellow-600"></i>
-              </div>
-              <span class="text-gray-700 font-medium">Bantuan</span>
-            </div>
-            <kbd class="bg-gray-800 text-white px-3 py-2 rounded-lg text-sm font-mono shadow-lg"
-              >F1</kbd
-            >
-          </div>
-        </div>
-        
-        <div class="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-b-3xl text-center border-t border-white/20">
-          <p class="text-sm text-gray-600 font-medium">
-            🚀 Gunakan shortcut untuk bekerja lebih efisien!
-          </p>
-        </div>
-      </div>
     </div>
 
     <!-- About Modal -->

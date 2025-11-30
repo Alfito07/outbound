@@ -34,30 +34,6 @@ class UIManager {
         }, 300)();
       }
     });
-
-    // Keyboard shortcuts (tetap sama)
-    document.addEventListener("keydown", (e) => {
-      if (e.ctrlKey || e.metaKey) {
-        switch (e.key) {
-          case "Enter":
-            e.preventDefault();
-            this.generateMessages();
-            break;
-          case "p":
-            e.preventDefault();
-            this.previewAutoDetection();
-            break;
-          case "c":
-            e.preventDefault();
-            this.copyAllMessages();
-            break;
-          case "Delete":
-            e.preventDefault();
-            this.clearAllInputs();
-            break;
-        }
-      }
-    });
   }
 
   /**
