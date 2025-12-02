@@ -34,6 +34,22 @@ class UIManager {
         }, 300)();
       }
     });
+
+    // Keyboard shortcut
+    document.addEventListener("keydown", (e) => {
+      if (e.ctrlKey || e.metaKey) {
+        switch (e.key) {
+          case "Enter":
+            e.preventDefault();
+            this.generateMessages();
+            break;
+          case "Delete":
+            e.preventDefault();
+            this.clearAllInputs();
+            break;
+        }
+      }
+    });
   }
 
   /**
