@@ -304,7 +304,7 @@ class UIManager {
     >
       <i class="fas fa-search"></i>
       Preview Detection
-      <kbd class="text-xs bg-white/20 px-2 py-1 rounded">Ctrl+P</kbd>
+      <kbd class="text-xs bg-white/20 px-2 py-1 rounded"></kbd>
     </button>
     
     <button
@@ -313,7 +313,7 @@ class UIManager {
     >
       <i class="fas fa-copy"></i>
       Copy Semua
-      <kbd class="text-xs bg-white/20 px-2 py-1 rounded">Ctrl+C</kbd>
+      <kbd class="text-xs bg-white/20 px-2 py-1 rounded"></kbd>
     </button>
     
     <button
