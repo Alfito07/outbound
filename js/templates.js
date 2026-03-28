@@ -33,7 +33,7 @@ SSID: {ssid}
 
 Silakan sambungkan kembali perangkat Anda menggunakan SSID baru. Apabila masih ada kendala, jangan ragu untuk menghubungi kami.{asp}`,
 
-      ganti_password: `{salam}, Kak {nama}, kami dari ICONNET ingin follow-up terkait laporan kendala LAIN-LAIN dengan No. Tiket pelaporan {tiket}.
+      ganti_password: `{salam}, Kak {nama}. Kami dari ICONNET ingin follow-up terkait laporan kendala LAIN-LAIN dengan No. Tiket pelaporan {tiket}.
 
 Password WiFi Anda sudah kami perbarui sesuai permintaan:
 Password: {password}
