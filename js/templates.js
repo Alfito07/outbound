@@ -5,20 +5,20 @@
 class TemplateManager {
   constructor() {
     this.templates = {
-      standard: `{salam} pengguna ICONNET atas nama Bpk/Ibu {nama}, sebelumnya kami memohon maaf atas kendala yang Bpk/Ibu alami. Kami dari ICONNET ingin follow-up terkait laporan kendala {kategori} dengan No. Tiket pelaporan {tiket}.
+      standard: `{salam} Kak {nama}, sebelumnya kami memohon maaf atas kendala yang dialami. Kami dari ICONNET ingin follow-up terkait laporan kendala {kategori} dengan No. Tiket pelaporan {tiket}.
 
-Apakah saat ini Bapak/Ibu kendalanya sudah tertangani?{asp}`,
+Sudah kami lakukan action dari sistem, silahkan dicoba kembali akses internetnya. Sampaikan pada kami apabila masih ada kendala?{asp}`,
 
-      wifi_default: `{salam}, pengguna ICONNET atas nama Bpk/Ibu {nama}, sebelumnya kami memohon maaf atas kendala yang Bpk/Ibu alami. Kami dari ICONNET ingin follow-up terkait laporan {kategori} dengan No. Tiket pelaporan {tiket}.
+      wifi_default: `{salam}, Kak {nama}, sebelumnya kami memohon maaf atas kendala yang dialami. Kami dari ICONNET ingin follow-up terkait laporan {kategori} dengan No. Tiket pelaporan {tiket}.
     
-Kami informasikan bahwa nama WiFi di lokasi bapak/ibu telah mengalami reset ke pengaturan default. berikut nama wifinya
+Kami informasikan bahwa WIFI Kakak telah ter-reset default. Saat ini WIFI yang aktif adalah :
 
 SSID    : {ssid}
 Password : {password}  
 
-Jika ada permintaan khusus terkait nama WiFi (SSID) atau password, silakan informasikan kepada kami agar dapat disesuaikan sesuai kebutuhan{asp}`,
+Silahkan dicoba hubungkan dahulu ke WIFI tersebut. Sampaikan pada kami apabila ada perubahan nama WIFI dan password WIFI yang baru.{asp}`,
 
-      ganti_ssid_password: `{salam}, pengguna ICONNET atas nama Bpk/Ibu {nama}, sebelumnya kami memohon maaf atas kendala yang Bpk/Ibu alami. Kami dari ICONNET ingin follow-up terkait laporan kendala LAIN-LAIN dengan No. Tiket pelaporan {tiket}.
+      ganti_ssid_password: `{salam}, Kak {nama}, kami dari ICONNET ingin follow-up terkait laporan kendala LAIN-LAIN dengan No. Tiket pelaporan {tiket}.
 
 SSID dan password WiFi Anda sudah kami perbarui sesuai permintaan:
 SSID : {ssid}
@@ -26,28 +26,28 @@ Password : {password}
 
 Silakan sambungkan kembali perangkat Anda menggunakan SSID dan Password baru. Apabila masih ada kendala, jangan ragu untuk menghubungi kami.{asp}`,
 
-      ganti_ssid: `{salam}, pengguna ICONNET atas nama Bpk/Ibu {nama}, sebelumnya kami memohon maaf atas kendala yang Bpk/Ibu alami. Kami dari ICONNET ingin follow-up terkait laporan kendala LAIN-LAIN dengan No. Tiket pelaporan {tiket}.
+      ganti_ssid: `{salam}, Kak {nama}, kami dari ICONNET ingin follow-up terkait laporan kendala LAIN-LAIN dengan No. Tiket pelaporan {tiket}.
 
 SSID WiFi Anda sudah kami perbarui sesuai permintaan:
 SSID: {ssid}
 
 Silakan sambungkan kembali perangkat Anda menggunakan SSID baru. Apabila masih ada kendala, jangan ragu untuk menghubungi kami.{asp}`,
 
-      ganti_password: `{salam}, pengguna ICONNET atas nama Bpk/Ibu {nama}, sebelumnya kami memohon maaf atas kendala yang Bpk/Ibu alami. Kami dari ICONNET ingin follow-up terkait laporan kendala LAIN-LAIN dengan No. Tiket pelaporan {tiket}.
+      ganti_password: `{salam}, Kak {nama}, kami dari ICONNET ingin follow-up terkait laporan kendala LAIN-LAIN dengan No. Tiket pelaporan {tiket}.
 
 Password WiFi Anda sudah kami perbarui sesuai permintaan:
 Password: {password}
 
 Silakan sambungkan kembali perangkat Anda menggunakan Password baru. Apabila masih ada kendala, jangan ragu untuk menghubungi kami.{asp}`,
 
-      streaming_service: `{salam}, pengguna ICONNET atas nama Bpk/Ibu {nama}, sebelumnya kami memohon maaf atas kendala yang Bpk/Ibu alami. Kami dari ICONNET ingin follow-up terkait laporan kendala {kategori} dengan No. Tiket pelaporan {tiket}.
+      streaming_service: `{salam}, Kak {nama}, sebelumnya kami memohon maaf atas kendala yang dialami. Kami dari ICONNET ingin follow-up terkait laporan kendala {kategori} dengan No. Tiket pelaporan {tiket}.
 
-Mohon bantuannya untuk mencoba kembali dan disarankan untuk reboot terlebih dahulu. Jika diperlukan login ulang berikut username dan passwordnya:
+Kami sarankan untuk reboot terlebih dahulu perangkat STB-nya dengan cara melepas dan memasang kembali adaptor power STB. Jika diperlukan login ulang berikut username dan passwordnya:
 
 Username: {ssid}
 Password: {password}
 
-Apakah saat ini Bapak/Ibu kendalanya sudah tertangani?{asp}`,
+Sampaikan pada kami apabila masih ada kendala, dengan melampirkan foto kendala terbaru {asp}`,
     };
 
     this.customTemplates = this.loadCustomTemplates();
