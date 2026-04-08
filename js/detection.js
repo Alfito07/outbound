@@ -76,7 +76,7 @@ class DetectionEngine {
       "HARD RESET",
       "SOFT RESET",
     ];
-   
+
     const hasResetInKategori = this.containsAny(kategoriUpper, resetKeywords);
     const hasResetInKeperluan = this.containsAny(keperluanUpper, resetKeywords);
 
@@ -114,20 +114,30 @@ class DetectionEngine {
       return { template: "ganti_password", name: "Ganti Password" };
     }
 
-    // 6. INTERNET ISSUES + KONFIRMASI
+    // 6. INTERNET DOWN + KONFIRMASI
     if (
       this.containsAny(kategoriUpper, [
         "INTERNET DOWN",
         "NO INTERNET",
+      ]) &&
+      keperluanUpper.includes("KONFIRMASI KENDALA USER")
+    ) {
+      console.log("✅ Matched: Standard - Internet Down");
+      return { template: "standard", name: "Standard - Internet Down" };
+    }
+
+    // 7. INTERNET SLOW + KONFIRMASI
+    if (
+      this.containsAny(kategoriUpper, [,
         "INTERNET SLOW",
       ]) &&
       keperluanUpper.includes("KONFIRMASI KENDALA USER")
     ) {
       console.log("✅ Matched: Standard - Internet Issue");
-      return { template: "standard", name: "Standard - Internet Issue" };
+      return { template: "wifi_slow", name: "Standard - Internet Issue" };
     }
 
-    // 7. LAIN-LAIN + KONFIRMASI
+    // 8. LAIN-LAIN + KONFIRMASI
     if (
       kategoriUpper.includes("LAIN-LAIN") &&
       keperluanUpper.includes("KONFIRMASI KENDALA USER")
@@ -136,7 +146,7 @@ class DetectionEngine {
       return { template: "standard", name: "Standard - Lain-lain" };
     }
 
-    // 8. DEFAULT FALLBACK
+    // 9. DEFAULT FALLBACK
     console.log("✅ Matched: Standard - Default");
     return { template: "standard", name: "Standard - Default" };
   }
@@ -159,7 +169,7 @@ class DetectionEngine {
       const confidence = this.calculateConfidence(
         entry.kategori,
         entry.keperluan,
-        detection
+        detection,
       );
 
       return {
@@ -308,7 +318,7 @@ class DetectionEngine {
       averageConfidence: Math.round(avgConfidence),
       mostCommonTemplate: Object.keys(templateCounts).reduce(
         (a, b) => (templateCounts[a] > templateCounts[b] ? a : b),
-        "standard"
+        "standard",
       ),
     };
   }
@@ -377,7 +387,7 @@ class DetectionEngine {
       console.log(
         `${status} Test ${i + 1}: ${test.kategori} | ${test.keperluan} → ${
           result.template
-        } (expected: ${test.expected})`
+        } (expected: ${test.expected})`,
       );
     });
   }

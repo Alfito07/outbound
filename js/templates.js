@@ -9,6 +9,10 @@ class TemplateManager {
 
 Sudah kami lakukan action dari sistem, silahkan dicoba kembali akses internetnya. Sampaikan pada kami apabila masih ada kendala.{asp}`,
 
+      wifi_slow: `{salam} Kak {nama}. Sebelumnya kami memohon maaf atas kendala yang dialami. Kami dari ICONNET ingin follow-up terkait laporan kendala {kategori} dengan No. Tiket pelaporan {tiket}.
+
+Sudah kami lakukan action dari sistem, silahkan dicoba kembali akses internetnya. Sampaikan pada kami apabila masih ada kendala dengan melampirkan screenshoot hasil speedtest dari link Nperf.com/id {asp}`,
+
       wifi_default: `{salam}, Kak {nama}. Sebelumnya kami memohon maaf atas kendala yang dialami. Kami dari ICONNET ingin follow-up terkait laporan {kategori} dengan No. Tiket pelaporan {tiket}.
     
 Kami informasikan bahwa WIFI Kakak telah ter-reset default. Saat ini WIFI yang aktif adalah :
@@ -153,7 +157,7 @@ Sampaikan pada kami apabila masih ada kendala, dengan melampirkan foto kendala t
     try {
       localStorage.setItem(
         "custom_templates",
-        JSON.stringify(this.customTemplates)
+        JSON.stringify(this.customTemplates),
       );
       return true;
     } catch (error) {
@@ -176,7 +180,7 @@ Sampaikan pada kami apabila masih ada kendala, dengan melampirkan foto kendala t
     Utils.downloadFile(
       JSON.stringify(data, null, 2),
       `templates-export-${new Date().toISOString().split("T")[0]}.json`,
-      "application/json"
+      "application/json",
     );
   }
 
